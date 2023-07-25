@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Information</h1>
+        <label for="option">Select an option:</label>
+        <select id="option" onchange="showInput()">
+            <option value="0">Exit</option>
+            <option value="1">Get Weather</option>
+            <option value="2">Get Wind Speed</option>
+            <option value="3">Get Pressure</option>
+        </select>
+
+        <div id="dateInput" style="display: none;">
+            <label for="date">Enter the date (yyyy-mm-dd):</label>
+            <input type="text" id="date">
+            <button onclick="getData()">Submit</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
